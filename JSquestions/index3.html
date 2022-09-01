@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Q1 Find the number of digits
+
+
+const Find_Digits = (num) => 
+{
+   count=0;
+   while(num!==0){
+     num=parseInt(num/10);
+     count++;
+   }
+   return count;
+};
+
+
+
+// Q2 Find the Fives.
+
+
+
+const Find_Five = (n) => 
+{
+	 let count=0;
+	  while (n > 0) {
+ 
+      if (n%10==5)
+    
+      {
+         count= count+1;
+        n = n / 10;
+        n=parseInt(n);
+    }
+    
+	  }
+   
+    return count;
+
+};
+
+
+//Q3 Find Sum
+
+
+const findSum = (n) => {
+    
+  
+    let SUM=0;
+    for (let b=1;b<n;b+2){
+        SUM=SUM+b;
+    }
+    
+    return SUM;
+    
+    };
+    
+    
+//Q4 Find the sum of the digits of a given number.
+
+
+
+const Number_Sum = (n) => 
+{
+
+
+let ans=0;
+while(n!==0){
+    let digit = n%10;
+    ans+=digit;
+    n=n/10;
+    n=parseInt(n);
+}
+return ans;
+};
+
+
+
+//Q4 Print the Odds.
+
+
+console.log(2);
+
+const Print_Odd = (n)=> 
+{
+	 for(let i=2;i<n;i++)
+	 {
+	   if(i%2!==0)
+	   {
+	     console.log(i);
+	   }
+	 }
+};
+
+
+//Q5  const Print_pattern = (n) => 
+{
+for(let i=1;i<=n;i++)
+{
+  let st=" ";
+  
+  for (let j=1;j<=i;j++)
+  {
+    st=st+"*";
+  }
+
+console.log(st);
+}
+
+};
+
+
+
+//Q6 Check whether a Number is a prime or not.
+
+
+const Prime_Check = (n) => 
+{
+let i;
+	 for(i=2;i<=(n-1);i++){
+	   if(n%i===0){
+	     break;
+	   }
+	 }
+	   if(i==n){
+	     return "YES";
+	   }else{
+	     return "NO";
+	   }
+
+};
+
+
+//Q7 Print Numbers
+
+
+const printNumbers = (n) => {
+  
+  for( let i=1; i<=n; i++){
+    console.log(i);
+  }
+
+};
+
+
+//Q8 Print the Table
+
+
+
+const Print_Table = (N) => 
+{
+	
+	for(let i=1;i<=10;i++)
+	{ let res=i*N;
+	console.log(N+ " * "+i+" = " +res);
+	
+	
+	}
+	
+};
+
+
+    </script>
+    
+</body>
+</html>
