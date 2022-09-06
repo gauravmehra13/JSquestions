@@ -155,9 +155,12 @@ const isAllPass = (N, Arr) =>
 //Q9 Unique Color Shirt
 
 
+ function Unique_Shirts (arr,N) {
+  let unique = arr.filter((value) => arr.indexOf(value) === arr.lastIndexOf(value));
+      return(unique.length);
 
 
-
+}
 
 
 //Q10 Min And Max
