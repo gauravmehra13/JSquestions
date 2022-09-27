@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<link rel="stylesheet" href="domques.css">
+<body>
+
+ 
+<h3>Q1 Write the code to access element which is having id as "text"</h3>   
+
+<p>let el=document.getElementById("text")</p>
+    
+<h3>Write the code to access element which is having tag as "h1"</h3>  
+
+<p>let ele=document.getElementsByTagName("h1")</p>
+    
+<h3>Q3 Write the code to access element which is having class as "box"</h3>    
+   
+<p>let elem=document.getElementsByClassName("box")</p>
+
+    
+<h3>Q4 Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h3>
+
+<h1 id="hello">Hello</h1>
+
+<pre>let h1=document.getElementsByClassName("hello")
+    h1.innerText="Hello World"
+    console.log(h1.innerText)</pre>
+    
+<h3>Q5 Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction. </h3>
+   
+    <div class="cards">
+
+    <div class="card">hey</div>
+    <div class="card">how are you?</div>
+    <div class="card">i am fine</div>
+
+    </div>
+
+<button onclick="function change()">Click Me</button>
+
+<h3>Q6 Whats the difference between window vs document?</h3>    
+<p>1.The window object represents a window/tab containing a DOM document where as document object is property of window object that points to the DOM document loaded in that window.</p>
+<p>2.You can access a document object either using window.document property or using document object directly as window is global object. In the below example, title is the property of document object.</p>
+
+<h3>Q7 <h1>Hello</h1></h3>
+Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions
+
+<h1 id="Heading">Hello</h1>
+
+<h3>Q8 Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h3>
+
+<h2 class="hello">Hello World</h2>
+
+<button class="btn" onclick="replace()">Replace Text</button>
+
+<h3>Q9 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h3>
+<h1>Time</h1>
+
+<span id="t1" style="font-size: 40px;"></span>:
+<span id="t2" style="font-size: 40px;"></span>:
+<span id="t3" style="font-size: 40px;"></span>
+
+
+<script>
+    function getTime(){
+    let date = new Date();
+    let HH = date.getHours();
+    let MM = date.getMinutes();
+    let SS = date.getSeconds();
+
+
+    document.getElementById("t1").innerText = HH;
+    document.getElementById("t2").innerText = MM;
+    document.getElementById("t3").innerText = SS;
+
+    
+
+    setTimeout(getTime);
+}
+
+getTime();
+</script>
+
+
+<h3>Q10 Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected </h3>
+<div class="year">
+<select onchange="dropdown()" id="drop">
+<option>Select The Year</option>
+<option>2017-18</option>
+<option>2018-19</option>
+<option>2019-20</option>
+<option>2020-21</option>
+<option>2021-22</option>
+</select>
+<input type="text" id="text">
+</div>
+
+<h3>Q11 Create a form having name ,email, phone no. , birth year 
+    Add validations - phone no. should start with 91 , it should be 10 digits
+    email should be domain prepbytes.com
+    birth year should be > 95</h3>
+
+    <form action="#">
+        <label for="name">Name : </label>
+        <input id="name" type="text" placeholder="Enter your name" required><br><br>
+        <label for="email">Email :</label>
+        <input id="email" type="text" placeholder="Enter your email" required><span
+        id="message1"> Domain should be "@prepbytes.com" only</span><br><br>
+        <label for="phone">Phone No:</label>
+        <input id="phone" type="number" placeholder="Enter the phone number"
+        required><span id="message2"> Phone number should start with 91 and must be 10 digits
+        only</span><br><br>
+        <label for="birthYear">Birth Year : </label>
+        <input id="birthYear" type="date" required><span id="message3"> Birth Year should
+        be greater than 1995</span><br><br>
+
+        <button type="submit" onclick="check()">Submit</button>
+        </form>
+
+
+<script src="DOM.js"></script>
+
+    
+</body>
+</html>

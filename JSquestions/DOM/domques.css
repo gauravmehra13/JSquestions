@@ -1,0 +1,17 @@
+.cards{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}
+.card
+{   color: white;
+    width: 120px;
+    text-align: center;
+    height: 150px;  
+    background-color: rebeccapurple;
+
+}
+
+
